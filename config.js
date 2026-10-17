@@ -2,8 +2,8 @@
 const CONFIG = {
   name: "Websaaz",
   whatsapp: "923393125143",            // 92 se shuru, bina + ke
-  instagram: "websaaz",                // jab Instagram bana lo to yahan handle likh do (bina @)
-  siteUrl: "https://your-site.vercel.app", // deploy ke baad apna link likho
+  instagram: "websaaz.studio",                // jab Instagram bana lo to yahan handle likh do (bina @)
+  siteUrl: "https://websaaz.vercel.app/", // deploy ke baad apna link likho
   pin: "786786",                       // Studio ka PIN
   headline: "Websites and AI tools that bring you customers.",
   sub: "I build fast, mobile-friendly websites, landing pages and AI-powered tools for businesses anywhere in the world. See a live demo first, then decide.",
