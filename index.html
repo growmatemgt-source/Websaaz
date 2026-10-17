@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Websaaz</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script></head><body>
+<canvas id="fx"></canvas><div class="blob b1"></div><div class="blob b2"></div>
+<header class="top"><div class="wrap"><a href="#" class="logo"><img src="logo-icon.svg" alt=""><span id="brand"></span></a>
+<nav><a href="#services" class="hide">Services</a><a href="#work" class="hide">Work</a><a href="#process" class="hide">Process</a><a class="btn small" id="wa0">WhatsApp</a></nav></div></header>
+
+<div id="site">
+<div class="hero"><div class="wrap"><span class="pill"><i></i>Taking new projects worldwide</span>
+<h1>Futuristic websites for <span class="gt" id="rot"></span></h1><p id="s"></p>
+<div class="row"><a class="btn" id="wa">Start a project</a><a class="btn alt" href="#work">See live work</a></div>
+<div class="chips"><span>Mobile-first</span><span>AI-powered</span><span>Fast delivery</span><span id="cnt"></span></div></div></div>
+<div class="ticker"><div id="tk"></div></div>
+<section id="services"><div class="wrap"><h2 class="rv">What I <span class="gt">build</span></h2><p class="lead rv">Fixed starting prices. Final quote after a short chat.</p><div class="cards" id="svc"></div></div></section>
+<section id="work" style="padding-top:20px"><div class="wrap"><h2 class="rv">Live <span class="gt">projects</span></h2><p class="lead rv">Click any project to open the real website.</p><div class="cards grid" id="wk"></div></div></section>
+<section id="process"><div class="wrap"><h2 class="rv">How it <span class="gt">works</span></h2><p class="lead rv">Simple, fast, no surprises.</p>
+<div class="cards steps"><div class="card rv"><h3>Free demo</h3><p>Tell me about your business and I prepare a quick demo of your website.</p></div><div class="card rv"><h3>Build</h3><p>You approve the design, I build it mobile-first with your content and branding.</p></div><div class="card rv"><h3>Launch</h3><p>I deploy it live on a fast global host and hand everything over to you.</p></div></div></div></section>
+<section style="padding-top:0"><div class="wrap"><div class="cta rv"><h2>Ready to look <span class="gt">ahead of the competition?</span></h2><p>Message me on WhatsApp. I usually reply within a few hours.</p><a class="btn" id="wa2">Message on WhatsApp</a></div></div></section>
+<footer><div class="wrap"><p id="foot"></p><button id="open">Studio</button></div></footer>
+</div>
+
+<div id="studio"><div class="wrap">
+<div class="tabs"><button class="btn on" data-p="find">Find clients</button><button class="btn" data-p="leads">Leads</button><button class="btn" data-p="post">Instagram post</button><button class="btn dark" id="back">Back to site</button></div>
+
+<div class="panel on" id="find">
+<div class="box"><h2>Business search</h2>
+<div class="cols"><div><label for="type">Business type</label>
+<select id="type"><option>restaurant</option><option>salon</option><option>clinic</option><option>dentist</option><option>gym</option><option>real estate agency</option><option>boutique</option><option>bakery</option><option>academy</option><option>travel agency</option><option>photographer</option><option>law firm</option></select></div>
+<div><label for="area">City / country</label><input id="area" placeholder="e.g. Dubai, London, Karachi"></div></div>
+<div class="links" id="slinks"></div>
+<p class="note">Open Google Maps and pick businesses with no website or an old one. Save their number in Leads.</p></div>
+<div class="box"><h2>Message</h2>
+<div class="cols"><div><label for="biz">Business name</label><input id="biz" placeholder="e.g. Glow Salon"></div>
+<div><label for="lang">Language</label><select id="lang"><option value="en">English</option><option value="ur">Roman Urdu</option></select></div></div>
+<label for="tpl">Type</label><select id="tpl"><option value="0">First message</option><option value="1">Follow-up</option><option value="2">Group post</option></select>
+<label for="msg">Message</label><textarea id="msg"></textarea>
+<div class="links"><button class="btn dark" id="cpy">Copy</button></div></div>
+</div>
+
+<div class="panel" id="leads"><div class="box"><h2>Leads</h2>
+<div class="cols"><div><label for="ln">Business name</label><input id="ln"></div><div><label for="lp">Phone with country code (e.g. 923001234567)</label><input id="lp" inputmode="tel"></div></div>
+<div class="links"><button class="btn dark" id="ladd">Add lead</button></div>
+<table style="margin-top:16px"><tbody id="lt"></tbody></table>
+<p class="note">Saved only in this browser.</p></div></div>
+
+<div class="panel" id="post"><div class="box"><h2>Instagram post</h2>
+<label for="pf">Photo</label><input type="file" id="pf" accept="image/*">
+<img class="prev" id="pv" alt="" hidden>
+<label for="cap">Caption</label><textarea id="cap">New project live. Want a website like this for your business? Send me a DM.
+
+#webdesign #website #webdeveloper #freelancer #smallbusiness #ai</textarea>
+<div class="links"><button class="btn" id="share">Share to Instagram</button><button class="btn dark" id="dl">Download photo + copy caption</button></div>
+<p class="note">On a phone, Share opens the share sheet: pick Instagram and the photo and caption go with it. On a computer, the photo downloads, the caption is copied and Instagram opens. Instagram does not allow free automatic posting from a website.</p></div></div>
+</div></div>
+
+<div id="pinm"><div class="box"><h2>Studio PIN</h2><label for="pin">Enter PIN</label><input id="pin" type="password" inputmode="numeric" autocomplete="off">
+<p class="note" id="perr" style="color:#B3261E;min-height:20px"></p>
+<div class="links" style="margin-top:0"><button class="btn" id="pok">Open</button><button class="btn dark" id="pno">Cancel</button></div></div></div>
+
+<script>
+const C=CONFIG,$=id=>document.getElementById(id),Q=encodeURIComponent;
+document.title=C.name+" | Websites & AI tools";
+$("brand").textContent=C.name;$("s").textContent=C.sub;
+const wl="https://wa.me/"+C.whatsapp+"?text="+Q("Hi, I would like a website / project quote.");
+["wa0","wa","wa2"].forEach(i=>$(i).href=wl);
+const card=(el)=>el.addEventListener("pointermove",e=>{const r=el.getBoundingClientRect();el.style.setProperty("--mx",e.clientX-r.left+"px");el.style.setProperty("--my",e.clientY-r.top+"px")});
+C.services.forEach(x=>{const d=document.createElement("div");d.className="card rv";d.innerHTML="<h3></h3><p></p><div class='price'></div>";
+d.children[0].textContent=x.t;d.children[1].textContent=x.d;d.children[2].textContent=x.p;$("svc").append(d);card(d)});
+C.portfolio.forEach(x=>{const a=document.createElement("a");a.className="card work rv";a.href=x.url;a.target="_blank";a.rel="noopener";
+a.innerHTML='<div class="ph"><div class="in"></div></div><div class="t"><h3></h3><p></p></div>';
+const ph=a.querySelector(".ph"),box=a.querySelector(".in");ph.style.setProperty("--a",x.accent||"#7C5CFF");
+const tile=()=>{box.innerHTML='<div class="mk"></div><div class="wm"></div>';box.children[0].textContent=x.mark||x.title.charAt(0);box.children[1].textContent=x.title};
+if(x.logo){const im=new Image();im.className="lg";im.alt=x.title+" logo";im.onerror=tile;im.src=x.logo;box.append(im)}else tile();
+a.querySelector("h3").textContent=x.title;a.querySelector("p").textContent=x.desc;$("wk").append(a);card(a)});
+document.querySelectorAll(".card").forEach(card);
+$("cnt").textContent=C.portfolio.length+" live projects";
+$("foot").innerHTML='Instagram <a target="_blank" rel="noopener" href="https://instagram.com/'+C.instagram+'">@'+C.instagram+'</a> | WhatsApp +'+C.whatsapp+'<br>&copy; '+new Date().getFullYear()+' '+C.name;
+// ticker
+const tw=["Websites","AI tools","Automation","Landing pages","Web apps","Redesigns","Dashboards"];
+$("tk").innerHTML=[...tw,...tw,...tw,...tw].map(w=>"<span>"+w+"</span><b>&#10022;</b>").join("");
+// rotating word
+const ws=["restaurants","clinics","agencies","startups","online stores","creators"];let wi=0;$("rot").textContent=ws[0];
+setInterval(()=>{$("rot").classList.add("out");setTimeout(()=>{wi=(wi+1)%ws.length;$("rot").textContent=ws[wi];$("rot").classList.remove("out")},350)},2400);
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach((e,i)=>{e.style.transitionDelay=(i%4)*70+"ms";io.observe(e)});
+// particle network
+(()=>{if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;const cv=$("fx"),x=cv.getContext("2d");let w,h,P=[];
+const rs=()=>{w=cv.width=innerWidth;h=cv.height=innerHeight;P=Array.from({length:Math.min(70,Math.floor(w/18))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}))};rs();addEventListener("resize",rs);
+(function f(){x.clearRect(0,0,w,h);for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;x.fillStyle="rgba(150,160,255,.7)";x.fillRect(p.x,p.y,2,2)}
+for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const d=Math.hypot(P[i].x-P[j].x,P[i].y-P[j].y);if(d<120){x.strokeStyle="rgba(124,92,255,"+(.28*(1-d/120))+")";x.beginPath();x.moveTo(P[i].x,P[i].y);x.lineTo(P[j].x,P[j].y);x.stroke()}}
+requestAnimationFrame(f)})()})();
+// studio lock
+const show=()=>{document.body.classList.add("st");scrollTo(0,0)};
+function ask(){if(sessionStorage.getItem("ok"))return show();$("pinm").style.display="flex";$("pin").value="";$("perr").textContent="";$("pin").focus()}
+$("open").onclick=ask;if(location.hash=="#studio")ask();
+$("pno").onclick=()=>$("pinm").style.display="none";
+$("pok").onclick=()=>{if($("pin").value===C.pin){sessionStorage.setItem("ok","1");$("pinm").style.display="none";show()}else $("perr").textContent="Wrong PIN."};
+$("pin").onkeydown=e=>{if(e.key=="Enter")$("pok").click()};
+$("back").onclick=()=>{document.body.classList.remove("st");sessionStorage.removeItem("ok");history.replaceState(0,"","./")};
+document.querySelectorAll(".tabs button[data-p]").forEach(b=>b.onclick=()=>{
+ document.querySelectorAll(".tabs button[data-p],.panel").forEach(e=>e.classList.remove("on"));b.classList.add("on");$(b.dataset.p).classList.add("on")});
+// finder
+const mk=(t,u)=>`<a class="btn dark small" target="_blank" rel="noopener" href="${u}">${t}</a>`;
+function links(){const t=$("type").value,a=$("area").value||"";
+ $("slinks").innerHTML=mk("Google Maps","https://www.google.com/maps/search/"+Q(t+" in "+a))
+ +mk("Instagram tag","https://www.instagram.com/explore/tags/"+Q((t+a).replace(/\s/g,"").toLowerCase()))
+ +mk("Facebook pages","https://www.facebook.com/search/pages?q="+Q(t+" "+a))
+ +mk("Google","https://www.google.com/search?q="+Q(t+" "+a+" contact"))}
+function tpl(){const b=$("biz").value||"team",u=C.siteUrl,m=C.name,ur=$("lang").value=="ur";
+ const T=ur?[`Assalam o Alaikum ${b}. Main ${m} se hoon, businesses ke liye fast aur mobile friendly websites banata hoon. Aap ke business ko online mazboot karne ke liye website kaam aa sakti hai. Mera kaam: ${u}. Kya main aap ke liye 1 page ka free demo bana dun?`,
+ `Assalam o Alaikum ${b}, pichle message ka follow-up hai. Main chhota demo bana kar bhej sakta hoon, pasand na aaye to koi pabandi nahi. Kaam: ${u}`,
+ `Assalam o Alaikum. Kisi ko apne business ki website ya AI tool chahiye to main banata hoon. Kaam: ${u} ya WhatsApp: +${C.whatsapp}`]
+ :[`Hi ${b} team, I’m from ${m}. I build fast, mobile-friendly websites for businesses. A stronger online presence could bring you more customers. Here is my work: ${u}. Can I send you a free 1-page demo?`,
+ `Hi ${b}, following up on my last message. I can send a quick demo of a website for your business. No obligation if it is not for you. My work: ${u}`,
+ `Need a website, landing page or AI tool for your business? I build them fast and mobile-friendly. Work: ${u} or WhatsApp +${C.whatsapp}`];
+ $("msg").value=T[$("tpl").value]}
+["type","area"].forEach(i=>$(i).oninput=links);["biz","tpl","lang"].forEach(i=>$(i).oninput=tpl);links();tpl();
+$("cpy").onclick=()=>{navigator.clipboard.writeText($("msg").value);$("cpy").textContent="Copied"};
+// leads
+let L=JSON.parse(localStorage.getItem("leads")||"[]");const S=["New","Messaged","Replied","Won","Lost"];
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ph=p=>{p=p.replace(/\D/g,"");return p.startsWith("0")?"92"+p.slice(1):p};
+function draw(){localStorage.setItem("leads",JSON.stringify(L));
+ $("lt").innerHTML=L.map((l,i)=>`<tr><td>${esc(l.n)}<br><span class="note">${esc(l.p)}</span></td><td><select data-i="${i}">${S.map(s=>`<option${s==l.s?" selected":""}>${s}</option>`).join("")}</select></td><td><button class="btn small" data-w="${i}">WhatsApp</button> <button class="btn small dark" data-d="${i}">Delete</button></td></tr>`).join("")||"<tr><td class='note'>No leads yet.</td></tr>"}
+$("ladd").onclick=()=>{if(!$("ln").value)return;L.push({n:$("ln").value,p:$("lp").value,s:S[0]});$("ln").value=$("lp").value="";draw()};
+$("lt").onclick=e=>{const t=e.target;if(t.dataset.d){L.splice(t.dataset.d,1);draw()}
+ if(t.dataset.w){const l=L[t.dataset.w];$("biz").value=l.n;tpl();if(l.s==S[0])l.s=S[1];draw();window.open("https://wa.me/"+ph(l.p)+"?text="+Q($("msg").value),"_blank")}};
+$("lt").onchange=e=>{if(e.target.dataset.i){L[e.target.dataset.i].s=e.target.value;draw()}};draw();
+// post
+let F=null;$("pf").onchange=e=>{F=e.target.files[0];if(!F)return;$("pv").src=URL.createObjectURL(F);$("pv").hidden=false};
+function dl(){if(!F){alert("Choose a photo first");return false}const a=document.createElement("a");a.href=URL.createObjectURL(F);a.download=F.name;a.click();navigator.clipboard.writeText($("cap").value);return true}
+$("dl").onclick=()=>{if(dl())window.open("https://www.instagram.com/","_blank")};
+$("share").onclick=async()=>{if(!F)return alert("Choose a photo first");
+ try{if(navigator.canShare&&navigator.canShare({files:[F]}))await navigator.share({files:[F],text:$("cap").value});
+ else{dl();alert("Direct share is not available on this device. Photo downloaded and caption copied. Open Instagram and upload.");window.open("https://www.instagram.com/","_blank")}}catch(_){}};
+</script></body></html>
